@@ -13,10 +13,11 @@ class Gestiune {
     ArrayList<Carte> lista_carti = new ArrayList<>();
     ArrayList<Persoana> lista_persoane = new ArrayList<>();
     NavigableSet<Imprumut> lista_imprumuturi = new TreeSet<>();
-    DataHandler dataHandler;
+    //DataHandler dataHandler;
+    DataHandlerDB dataHandler;
 
     public Gestiune(){
-        dataHandler = DataHandler.getDataHandler();
+        dataHandler = DataHandlerDB.getDataHandlerDB();
         dataHandler.loadAutori(lista_autori);
         dataHandler.loadEdituri(lista_edituri);
         dataHandler.loadSectii(lista_sectii);
